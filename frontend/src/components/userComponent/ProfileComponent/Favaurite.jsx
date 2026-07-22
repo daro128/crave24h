@@ -1,3 +1,4 @@
+import { UPLOADS_URL } from "../../../config";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -131,7 +132,7 @@ const Favaurite = () => {
                   >
                     <div className="relative">
                       <img
-                        src={r.logo ? `http://localhost:5000/uploads/${r.logo}` : placeholderImg}
+                        src={r.logo ? `${UPLOADS_URL}/${r.logo}` : placeholderImg}
                         alt={r.restaurant_name}
                         className="w-full h-40 object-cover"
                         onError={(e) => { e.target.src = placeholderImg; }}
@@ -200,7 +201,7 @@ const Favaurite = () => {
                   >
                     <div className="relative">
                       <img
-                        src={p.image ? `http://localhost:5000/uploads/${p.image}` : placeholderImg}
+                        src={p.image ? `${UPLOADS_URL}/${p.image}` : placeholderImg}
                         alt={p.product_name}
                         className="w-full h-40 object-cover"
                         onError={(e) => { e.target.src = placeholderImg; }}

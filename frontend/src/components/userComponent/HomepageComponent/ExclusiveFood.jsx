@@ -1,3 +1,4 @@
+import { UPLOADS_URL } from "../../../config";
 import { useNavigate } from "react-router-dom";
 import placeholderFood from "../../../assets/image copy 2.png";
 import Reveal from "../../common/Reveal";
@@ -33,7 +34,7 @@ const ExclusiveFood = ({ products }) => {
               className="card-hover relative overflow-hidden rounded-3xl group cursor-pointer"
             >
               <img
-                src={product.image ? `http://localhost:5000/uploads/${product.image}` : placeholderFood}
+                src={product.image ? `${UPLOADS_URL}/${product.image}` : placeholderFood}
                 alt={product.product_name}
                 className="w-full h-72 object-cover transition duration-500 group-hover:scale-110"
                 onError={(e) => { e.target.src = placeholderFood; }}

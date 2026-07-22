@@ -1,3 +1,4 @@
+import { UPLOADS_URL } from "../../../config";
 import { useNavigate } from "react-router-dom";
 import placeholderRestaurant from "../../../assets/image copy 2.png";
 
@@ -18,7 +19,7 @@ const TopRestaurants = ({ restaurants }) => {
                             className="relative min-w-[75%] sm:min-w-[45%] lg:min-w-[24%] shrink-0 overflow-hidden rounded-3xl group cursor-pointer"
                         >
                             <img
-                                src={item.logo ? `http://localhost:5000/uploads/${item.logo}` : placeholderRestaurant}
+                                src={item.logo ? `${UPLOADS_URL}/${item.logo}` : placeholderRestaurant}
                                 alt={item.restaurant_name}
                                 className="w-full h-80 object-cover transition-all duration-500 group-hover:scale-110"
                                 onError={(e) => { e.target.src = placeholderRestaurant; }}

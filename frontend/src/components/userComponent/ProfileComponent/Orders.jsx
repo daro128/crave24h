@@ -1,3 +1,4 @@
+import { UPLOADS_URL } from "../../../config";
 ﻿import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -159,7 +160,7 @@ const Orders = ({ setactiveMenu }) => {
                   <div className="w-28 shrink-0 overflow-hidden">
                     <img
                       src={order.Restaurant?.logo
-                        ? `http://localhost:5000/uploads/${order.Restaurant.logo}`
+                        ? `${UPLOADS_URL}/${order.Restaurant.logo}`
                         : placeholderRestaurant}
                       alt={order.Restaurant?.restaurant_name}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
@@ -273,7 +274,7 @@ const Orders = ({ setactiveMenu }) => {
                 >
                   <div className="relative h-36 overflow-hidden">
                     <img
-                      src={r.logo ? `http://localhost:5000/uploads/${r.logo}` : placeholderRestaurant}
+                      src={r.logo ? `${UPLOADS_URL}/${r.logo}` : placeholderRestaurant}
                       alt={r.restaurant_name}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       onError={e => { e.target.src = placeholderRestaurant; }}

@@ -1,3 +1,4 @@
+import { UPLOADS_URL } from "../../../config";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faMinus,
@@ -133,7 +134,7 @@ const Leftsection = () => {
               >
                 <div className="flex gap-4">
                   <img
-                    src={item.Product.image ? `http://localhost:5000/uploads/${item.Product.image}` : placeholderFood}
+                    src={item.Product.image ? `${UPLOADS_URL}/${item.Product.image}` : placeholderFood}
                     alt={item.Product.product_name}
                     className="w-24 h-24 rounded-xl object-cover"
                     onError={(e) => { e.target.src = placeholderFood; }}
@@ -233,7 +234,7 @@ const Leftsection = () => {
               onClick={() => navigate(`/restaurant/${restaurantId}`)}
             >
               <img
-                src={product.image ? `http://localhost:5000/uploads/${product.image}` : placeholderFood}
+                src={product.image ? `${UPLOADS_URL}/${product.image}` : placeholderFood}
                 className="w-full h-28 object-cover rounded-t-xl"
                 alt={product.product_name}
                 onError={(e) => { e.target.src = placeholderFood; }}

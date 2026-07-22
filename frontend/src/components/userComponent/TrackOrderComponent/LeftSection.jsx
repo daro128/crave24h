@@ -1,3 +1,4 @@
+import { UPLOADS_URL } from "../../../config";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStore, faClock, faUtensils } from "@fortawesome/free-solid-svg-icons";
 import placeholderFood from "../../../assets/image copy 2.png";
@@ -56,7 +57,7 @@ const LeftSection = ({ order }) => {
                   {item.Product?.image ? (
                     <img
                       src={item.Product.image}
-                      src={item.Product.image ? `http://localhost:5000/uploads/${item.Product.image}` : placeholderFood}
+                      src={item.Product.image ? `${UPLOADS_URL}/${item.Product.image}` : placeholderFood}
                       alt={name}
                       className="h-full w-full object-cover"
                       onError={(e) => { e.target.src = placeholderFood; }}

@@ -1,3 +1,4 @@
+import { API_URL } from "../../config";
 // AdminProfile.jsx
 import { useEffect, useState } from "react";
 import {
@@ -22,7 +23,7 @@ export default function AdminProfile() {
   const [toast,       setToast]       = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/admin/dashboard", {
+    fetch(`${API_URL}/admin/dashboard`, {
       headers: { Authorization: `Bearer ${localStorage.getItem("accessToken")}` },
     })
       .then((r) => r.json())

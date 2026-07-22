@@ -1,7 +1,8 @@
+import { UPLOADS_URL } from "../../config";
 import React from 'react';
 import { Trash2, Plus, ImageOff } from 'lucide-react';
 
-const UPLOADS_URL = "http://localhost:5000/uploads";
+
 
 const MenuItemCard = ({ item, onToggleStatus, onDeleteItem, onRestockItem }) => {
   const isAvailable = item.status === 'available';

@@ -1,3 +1,4 @@
+import { UPLOADS_URL } from "../../../config";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faStar } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
@@ -69,7 +70,7 @@ const RightSectionFood = ({ products = [] }) => {
                 className="card-hover bg-white rounded-2xl shadow-md overflow-hidden transition-all cursor-pointer relative"
               >
                 <img
-                  src={product.image ? `http://localhost:5000/uploads/${product.image}` : placeholderFood}
+                  src={product.image ? `${UPLOADS_URL}/${product.image}` : placeholderFood}
                   alt={product.product_name}
                   className="w-full h-52 object-cover"
                   onError={(e) => { e.target.src = placeholderFood; }}

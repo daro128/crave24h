@@ -1,3 +1,4 @@
+import { UPLOADS_URL } from "../../../config";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
@@ -80,7 +81,7 @@ const handleCheckout = async () => {
 
               <div className="flex gap-4 items-center flex-1">
                 <img
-                  src={item.image ? `http://localhost:5000/uploads/${item.image}` : placeholderFood}
+                  src={item.image ? `${UPLOADS_URL}/${item.image}` : placeholderFood}
                   alt={item.product_name}
                   className="w-16 h-16 rounded-xl object-cover"
                   onError={(e) => { e.target.src = placeholderFood; }}

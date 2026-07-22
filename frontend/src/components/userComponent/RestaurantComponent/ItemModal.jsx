@@ -1,3 +1,4 @@
+import { UPLOADS_URL } from "../../../config";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faXmark,
@@ -74,7 +75,7 @@ const ItemModal = ({
 
         {/* Product Image */}
         <img
-          src={food.image ? `http://localhost:5000/uploads/${food.image}` : placeholderFood}
+          src={food.image ? `${UPLOADS_URL}/${food.image}` : placeholderFood}
           alt={food.product_name}
           className="w-full h-60 object-cover"
           onError={(e) => { e.target.src = placeholderFood; }}

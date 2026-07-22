@@ -1,3 +1,4 @@
+import { UPLOADS_URL } from "../../config";
 import { useEffect, useState } from "react";
 import {
   Search,
@@ -14,7 +15,7 @@ import AdminSidebar from "../../components/admin/AdminSidebar";
 import Reveal from "../../components/common/Reveal";
 import { PATH } from "../../path";
 
-const UPLOADS_URL = "http://localhost:5000/uploads";
+
 
 import {
   getRestaurants,

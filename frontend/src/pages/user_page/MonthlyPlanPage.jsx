@@ -1,3 +1,4 @@
+import { UPLOADS_URL } from "../../config";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -91,7 +92,7 @@ const MonthlyPlanPage = () => {
           <div className="lg:col-span-2">
             <div className="relative rounded-3xl overflow-hidden">
               <img
-                src={restaurant.logo ? `http://localhost:5000/uploads/${restaurant.logo}` : placeholderRestaurant}
+                src={restaurant.logo ? `${UPLOADS_URL}/${restaurant.logo}` : placeholderRestaurant}
                 alt={restaurant.restaurant_name}
                 className="w-full h-64 object-cover"
                 onError={(e) => { e.target.src = placeholderRestaurant; }}

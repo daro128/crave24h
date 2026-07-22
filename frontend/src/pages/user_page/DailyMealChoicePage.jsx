@@ -1,3 +1,4 @@
+import { UPLOADS_URL } from "../../config";
 import { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -75,7 +76,7 @@ const DailyMealChoicePage = () => {
               id: String(p.product_id),
               name: p.product_name,
               tag: p.Category?.category_name || "",
-              image: p.image ? `http://localhost:5000/uploads/${p.image}` : placeholderFood,
+              image: p.image ? `${UPLOADS_URL}/${p.image}` : placeholderFood,
             }))
         );
       } catch {

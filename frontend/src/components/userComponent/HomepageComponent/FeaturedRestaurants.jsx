@@ -1,3 +1,4 @@
+import { UPLOADS_URL } from "../../../config";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faStar,
@@ -32,7 +33,7 @@ const FeaturedRestaurants = ({ restaurants }) => {
                         >
                             <div className="relative">
                                 <img
-                                    src={restaurant.logo ? `http://localhost:5000/uploads/${restaurant.logo}` : placeholderRestaurant}
+                                    src={restaurant.logo ? `${UPLOADS_URL}/${restaurant.logo}` : placeholderRestaurant}
                                     alt={restaurant.restaurant_name}
                                     className="w-full h-44 object-cover"
                                     onError={(e) => { e.target.src = placeholderRestaurant; }}

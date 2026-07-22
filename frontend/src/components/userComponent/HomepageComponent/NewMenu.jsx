@@ -1,3 +1,4 @@
+import { UPLOADS_URL } from "../../../config";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
@@ -29,7 +30,7 @@ const NewMenu = ({ products }) => {
             >
               <div className="relative">
                 <img
-                  src={item.image ? `http://localhost:5000/uploads/${item.image}` : placeholderFood}
+                  src={item.image ? `${UPLOADS_URL}/${item.image}` : placeholderFood}
                   alt={item.product_name}
                   className="w-40 h-35 object-cover rounded-3xl"
                   onError={(e) => { e.target.src = placeholderFood; }}

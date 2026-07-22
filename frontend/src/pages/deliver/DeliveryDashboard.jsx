@@ -1,3 +1,4 @@
+import { API_URL } from "../../config";
 // DeliveryDashboard.jsx
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -7,7 +8,7 @@ import DeliverySideNav from "../../components/delivery/DeliverySideNav";
 import NewOrder from "../../components/delivery/NewOrder"
 import Reveal from "../../components/common/Reveal";
 
-const BASE = "http://localhost:5000/api";
+const BASE = API_URL;
 
 export default function DeliveryDashboard() {
   const navigate = useNavigate();

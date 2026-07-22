@@ -1,3 +1,4 @@
+import { UPLOADS_URL } from "../../config";
 import Nav from "../../components/userComponent/HomepageComponent/Navbar";
 import Title from "../../components/userComponent/RestaurantComponent/Title";
 import FoodSection from "../../components/userComponent/RestaurantComponent/FoodSection";
@@ -61,8 +62,8 @@ const RestaurantPage = () => {
           restaurantId={id}
           status={restaurant.status}
           name={restaurant.restaurant_name}
-          img={restaurant.image ? `http://localhost:5000/uploads/${restaurant.image}` : placeholderRestaurant}
-          logo={restaurant.logo ? `http://localhost:5000/uploads/${restaurant.logo}` : placeholderRestaurant}
+          img={restaurant.image ? `${UPLOADS_URL}/${restaurant.image}` : placeholderRestaurant}
+          logo={restaurant.logo ? `${UPLOADS_URL}/${restaurant.logo}` : placeholderRestaurant}
           dsc={restaurant.description}
           rating={restaurant.average_rating}
           phone={restaurant.phone}

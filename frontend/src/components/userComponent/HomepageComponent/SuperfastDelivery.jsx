@@ -1,3 +1,4 @@
+import { UPLOADS_URL } from "../../../config";
 import { useNavigate } from "react-router-dom";
 import placeholderRestaurant from "../../../assets/image copy 2.png";
 
@@ -24,7 +25,7 @@ const SuperfastDelivery = ({ restaurants }) => {
               className="card-hover relative min-w-[75%] sm:min-w-[45%] lg:min-w-[24%] bg-white rounded-3xl p-4 hover:shadow-xl transition cursor-pointer"
             >
               <img
-                src={item.image ? `http://localhost:5000/uploads/${item.image}` : placeholderRestaurant}
+                src={item.image ? `${UPLOADS_URL}/${item.image}` : placeholderRestaurant}
                 alt={item.restaurant_name}
                 className="w-full h-60 object-cover rounded-2xl"
                 onError={(e) => { e.target.src = placeholderRestaurant; }}

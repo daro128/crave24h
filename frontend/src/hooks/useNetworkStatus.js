@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
+import { API_URL } from "../config";
 
-const HEALTH_URL = "http://localhost:5000/api/health";
+const HEALTH_URL = `${API_URL}/health`;
 const CHECK_INTERVAL = 10000;
 const REQUEST_TIMEOUT = 5000;
 

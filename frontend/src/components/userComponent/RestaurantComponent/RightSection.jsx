@@ -1,3 +1,4 @@
+import { UPLOADS_URL } from "../../../config";
 import { useEffect, useState } from "react";
 import ItemModal from "../RestaurantComponent/ItemModal";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -100,7 +101,7 @@ const RightSection = ({ setActiveCategory, setcartitems }) => {
                   className="card-hover bg-white shadow-lg border-l-4 border-[#004953] rounded-xl p-3 flex gap-4"
                 >
                   <img
-                    src={food.image ? `http://localhost:5000/uploads/${food.image}` : placeholderFood}
+                    src={food.image ? `${UPLOADS_URL}/${food.image}` : placeholderFood}
                     className="w-24 h-24 rounded-lg object-cover shrink-0"
                     onError={(e) => { e.target.src = placeholderFood; }}
                   />

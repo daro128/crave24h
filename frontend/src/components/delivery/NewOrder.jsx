@@ -1,8 +1,9 @@
+import { API_URL } from "../../config";
 // NewOrder.jsx
 import { MapPin, Clock, DollarSign, CheckCircle, XCircle } from "lucide-react";
 import { useState } from "react";
 
-const BASE = "http://localhost:5000/api";
+const BASE = API_URL;
 
 export default function NewOrder({ order, onAccepted }) {
   const [loading, setLoading] = useState(false);

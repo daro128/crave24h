@@ -1,3 +1,4 @@
+import { UPLOADS_URL } from "../../config";
 ﻿import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -161,7 +162,7 @@ const AllRestaurantsPage = () => {
                   {/* Image */}
                   <div className="relative">
                     <img
-                      src={r.image ? `http://localhost:5000/uploads/${r.image}` : placeholderRestaurant}
+                      src={r.image ? `${UPLOADS_URL}/${r.image}` : placeholderRestaurant}
                       alt={r.restaurant_name}
                       className="w-full h-48 object-cover"
                       onError={(e) => { e.target.src = placeholderRestaurant; }}

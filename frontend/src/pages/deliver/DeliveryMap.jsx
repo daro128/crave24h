@@ -1,3 +1,4 @@
+import { API_URL } from "../../config";
 import { useEffect, useState } from "react";
 import {
   Check, Utensils, Bike, CircleCheckBig,
@@ -8,7 +9,7 @@ import DeliveryNav from "../../components/delivery/DeliveryNav";
 import DeliverySideNav from "../../components/delivery/DeliverySideNav";
 import Reveal from "../../components/common/Reveal";
 
-const BASE    = "http://localhost:5000/api";
+const BASE    = API_URL;
 const STEPS = [
   "accepted",
   "picked_up",

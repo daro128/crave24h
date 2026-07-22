@@ -1,3 +1,4 @@
+import { UPLOADS_URL } from "../../../config";
 import image20 from "../../../assets/image copy 20.png";
 import placeholderFood from "../../../assets/image copy 2.png";
 import { useNavigate } from "react-router-dom";
@@ -26,7 +27,7 @@ const Tredingfood = ({ products }) => {
             className="card-hover bg-white rounded-3xl shadow-md min-w-[75%] sm:min-w-[45%] lg:min-w-[31%] shrink-0 overflow-hidden relative cursor-pointer"
           >
             <img
-              src={food.image ? `http://localhost:5000/uploads/${food.image}` : placeholderFood}
+              src={food.image ? `${UPLOADS_URL}/${food.image}` : placeholderFood}
               alt={food.product_name}
               className="w-full h-60 object-cover"
               onError={(e) => { e.target.src = placeholderFood; }}

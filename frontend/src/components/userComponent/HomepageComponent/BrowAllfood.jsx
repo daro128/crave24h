@@ -1,3 +1,4 @@
+import { UPLOADS_URL } from "../../../config";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import image18 from "../../../assets/image copy 18.png";
@@ -61,7 +62,7 @@ const BrowAllfood = ({ products }) => {
             className="bg-white min-w-76 rounded-3xl p-2 shadow-md hover:shadow-xl hover:scale-[1.02] transition-all relative cursor-pointer"
           >
             <img
-              src={food.image ? `http://localhost:5000/uploads/${food.image}` : placeholderFood}
+              src={food.image ? `${UPLOADS_URL}/${food.image}` : placeholderFood}
               alt={food.product_name}
               className="w-full h-52 object-cover rounded-2xl"
               onError={(e) => { e.target.src = placeholderFood; }}

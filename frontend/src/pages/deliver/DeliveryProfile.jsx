@@ -1,3 +1,4 @@
+import { API_URL } from "../../config";
 // DeliveryProfile.jsx
 import { useEffect, useState } from "react";
 import {
@@ -10,7 +11,7 @@ import DeliveryNav from "../../components/delivery/DeliveryNav";
 import DeliverySideNav from "../../components/delivery/DeliverySideNav";
 import Reveal from "../../components/common/Reveal";
 
-const BASE = "http://localhost:5000/api";
+const BASE = API_URL;
 
 export default function DeliveryProfile() {
   const navigate  = useNavigate();

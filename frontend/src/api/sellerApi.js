@@ -1,4 +1,6 @@
-const BASE_URL = "http://localhost:5000/api/seller";
+import { API_URL } from "../config";
+
+const BASE_URL = `${API_URL}/seller`;
 
 const authHeaders = () => ({
   Authorization: `Bearer ${localStorage.getItem("accessToken")}`,

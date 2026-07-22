@@ -1,3 +1,4 @@
+import { API_URL } from "../../config";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {
@@ -27,7 +28,7 @@ export default function AdminDashboard() {
   useEffect(() => {
     const fetchDashboard = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/admin/dashboard", {
+        const res = await fetch(`${API_URL}/admin/dashboard`, {
           headers: { Authorization: `Bearer ${localStorage.getItem("accessToken")}` },
         });
         const data = await res.json();
