@@ -1,4 +1,4 @@
-import API from "../Api/axios.js"
+import API from "../api/axios.js"
 
 const STORAGE_KEY = "appliedCoupon";
 

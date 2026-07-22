@@ -1,4 +1,4 @@
-import API from "../Api/axios.js"
+import API from "../api/axios.js"
 
 // Get all notifications
 export const getNotifications = async () => {
