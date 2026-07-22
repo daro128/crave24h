@@ -1,6 +1,6 @@
 import FavouriteRestaurant from "../models/FavouriteRestaurant.js";
 import FavouriteProduct from "../models/FavouriteProduct.js";
-import Customer from "../models/Customer.js";
+import Customer from "../models/customer.js";
 import Restaurant from "../models/Restaurant.js";
 import Product from "../models/Product.js";
 

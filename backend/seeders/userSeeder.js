@@ -1,7 +1,7 @@
 
 import bcrypt from "bcrypt";
 import sequelize from "../database/db.js";
-import User from "../models/User.js";
+import User from "../models/user.js";
 async function seedUsers() {
   try {
     await sequelize.sync();

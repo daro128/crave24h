@@ -7,9 +7,9 @@ import sequelize from "./database/db.js";
 // IMPORTANT: load associations first
 import "./models/associations.js";
 
-import User from "./models/User.js";
+import User from "./models/user.js";
 import Driver from "./models/Driver.js";
-import Customer from "./models/Customer.js";
+import Customer from "./models/customer.js";
 import Restaurant from "./models/Restaurant.js";
 import Category from "./models/Category.js";
 
